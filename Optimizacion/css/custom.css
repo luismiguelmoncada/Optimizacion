@@ -1,0 +1,23 @@
+/* -----------------------------------------
+   Custom.css - put your own changes here 
+----------------------------------------- */
+#btn_login {
+    background-image: -moz-linear-gradient( -45deg, rgb(0,234,189) 0%, rgb(0,189,218) 100%);
+    background-image: -webkit-linear-gradient( -45deg, rgb(0,234,189) 0%, rgb(0,189,218) 100%);
+    box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10em !important;
+    border: none;
+    color:white;
+    width:80%;
+}
+#btn_login:hover {
+    background-image: -moz-linear-gradient( -45deg, rgb(0,234,189) 0%, rgb(0,189,218) 100%);
+    background-image: -webkit-linear-gradient( -45deg, rgb(0,234,189) 0%, rgb(0,189,218) 44%);
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.1);
+}
+#btn_login, #btn_login:hover {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
