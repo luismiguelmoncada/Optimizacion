@@ -108,6 +108,7 @@
     <Content Include="fonts\linea.eot" />
     <Content Include="fonts\linea.ttf" />
     <Content Include="fonts\linea.woff" />
+    <Content Include="MenuPrincipal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -127,6 +128,7 @@
     <Content Include="img\ico\favicon.ico" />
     <Content Include="img\logo-dark.png" />
     <Content Include="img\logosm.png" />
+    <Content Include="Index.aspx" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\jquery\jquery-2.1.1.min.js" />
@@ -139,12 +141,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.Master.cs">
+      <DependentUpon>MenuPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Master.designer.cs">
+      <DependentUpon>MenuPrincipal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
