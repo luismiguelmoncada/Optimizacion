@@ -811,15 +811,15 @@ html.ff3 body {
   min-height: 100%;
 }
 body {
-  overflow-x: hidden;
-  /*background-image: url('/img/gallery/bg_login_medical.jpg');*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  color: #333333;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 300;
-  position: relative;
+    overflow-x: hidden;
+    background-image: url('../img/bg_login_medical.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    position: relative;
 }
 body.ovh {
   overflow: hidden;

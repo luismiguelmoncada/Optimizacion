@@ -6,12 +6,16 @@
 <head runat="server">
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>Menu | LifeCYCLE</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
  <%-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">--%>
   <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/plugins.css" rel="stylesheet" />
+    <link href="js/jquery/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -25,6 +29,9 @@
   -->
  <%-- <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">--%>
   <link href="css/skins/skin-blue.min.css" rel="stylesheet" />
+  <link href="css/cards.css" rel="stylesheet" />
+  <link href="css/select2.min.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -35,11 +42,11 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="Index.aspx" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>L</b>CY</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Life</b>CYCLE</span>
     </a>
 
     <!-- Header Navbar -->
@@ -67,7 +74,7 @@
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->                         
-                        <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="img/user_profile.jpg" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -114,16 +121,22 @@
           <li class="dropdown tasks-menu">
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
+              <i class="fa fa-power-off"></i>
+              <span class="label label-danger">!</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
+              <li class="header" style="text-align:center">Cerrar Sesión</li>
               <li>
                 <!-- Inner menu: contains the tasks -->
                 <ul class="menu">
                   <li><!-- Task item -->
-                    <a href="#">
+
+                      <div class="col-lg-12 col-md-12" style="text-align:center;padding-top:5px" >
+                           <input type="button" id="btnSalir" class="btn btn-danger" value="Salir" />
+                      </div>
+                     
+                       <%-- <a id="btnSalir" class="btn btn-default btn-flat">Salir</a>--%>
+                    <%--<a href="#">
                       <!-- Task title and progress text -->
                       <h3>
                         Design some buttons
@@ -136,13 +149,13 @@
                           <span class="sr-only">20% Complete</span>
                         </div>
                       </div>
-                    </a>
+                    </a>--%>
                   </li>
                   <!-- end task item -->
                 </ul>
               </li>
               <li class="footer">
-                <a href="#">View all tasks</a>
+                <a href="#">Hasta Pronto!</a>
               </li>
             </ul>
           </li>
@@ -151,14 +164,14 @@
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="img/user_profile.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs" id="nombreusuario_1">Nombre Usuario</span>
             </a>
-            <ul class="dropdown-menu">
+    <%--        <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="img/user_profile.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -186,10 +199,10 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a id="btnSalir" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
-            </ul>
+            </ul>--%>
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
@@ -208,19 +221,20 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="img/user_profile.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p id="nombreusuario_2">Nombre Usuario</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        
         </div>
       </div>
 
       <!-- search form (Optional) -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <input type="text" name="q" class="form-control" placeholder="Buscar...">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
@@ -230,10 +244,15 @@
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu">
-        <li class="header">HEADER</li>
+
+        <ul class="sidebar-menu" id="menucontent">
+        </ul>
+
+     <%-- <ul class="sidebar-menu">
+        <li class="header">MENÚ PRINCIPAL</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li class="active"><a href="Index.aspx"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+        <li class="active"><a href="SubirArchivo.aspx"><i class="fa fa-link"></i> <span>Subir Archivo</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
@@ -246,7 +265,7 @@
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
-      </ul>
+      </ul>--%>
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -254,17 +273,6 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
 
     <!-- Main content -->
     <section class="content">
@@ -384,10 +392,19 @@
 <!-- AdminLTE App -->
 <%--<script src="dist/js/app.min.js"></script>--%>
     <script src="js/app.min.js"></script>
-
+    <script src="js/dropzone.js"></script>
+    <script src="js/MenuMaster.js"></script>
+    <script src="js/sweet-alert.js"></script>
+    <script src="js/select2.full.js"></script>
+    <script src="js/pages/SubirArchivo.js"></script>
+    <script src="js/pages/Responsables.js"></script>
+    <script src="js/jquery/DataTables/js/jquery.dataTables.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the
      fixed layout. -->
 </body>
+     <script type="text/javascript">
+        subirArchivos();
+    </script>
 </html>

@@ -76,6 +76,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -109,6 +113,8 @@
     <Content Include="fonts\linea.ttf" />
     <Content Include="fonts\linea.woff" />
     <Content Include="MenuPrincipal.Master" />
+    <Content Include="ImportarArchivo.ashx" />
+    <Content Include="js\jquery\DataTables\images\Sorting icons.psd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,57 +126,65 @@
     <Content Include="css\AdminLTE.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\cards.css" />
     <Content Include="css\custom.css" />
     <Content Include="css\icons.css" />
     <Content Include="css\main.css" />
     <Content Include="css\plugins.css" />
-    <Content Include="css\skins\skin-black-light.css" />
-    <Content Include="css\skins\skin-black-light.min.css" />
-    <Content Include="css\skins\skin-black.css" />
-    <Content Include="css\skins\skin-black.min.css" />
-    <Content Include="css\skins\skin-blue-light.css" />
-    <Content Include="css\skins\skin-blue-light.min.css" />
-    <Content Include="css\skins\skin-blue.css" />
+    <Content Include="css\select2.min.css" />
     <Content Include="css\skins\skin-blue.min.css" />
-    <Content Include="css\skins\skin-green-light.css" />
-    <Content Include="css\skins\skin-green-light.min.css" />
-    <Content Include="css\skins\skin-green.css" />
-    <Content Include="css\skins\skin-green.min.css" />
-    <Content Include="css\skins\skin-purple-light.css" />
-    <Content Include="css\skins\skin-purple-light.min.css" />
-    <Content Include="css\skins\skin-purple.css" />
-    <Content Include="css\skins\skin-purple.min.css" />
-    <Content Include="css\skins\skin-red-light.css" />
-    <Content Include="css\skins\skin-red-light.min.css" />
-    <Content Include="css\skins\skin-red.css" />
-    <Content Include="css\skins\skin-red.min.css" />
-    <Content Include="css\skins\skin-yellow-light.css" />
-    <Content Include="css\skins\skin-yellow-light.min.css" />
-    <Content Include="css\skins\skin-yellow.css" />
-    <Content Include="css\skins\skin-yellow.min.css" />
-    <Content Include="css\skins\_all-skins.css" />
-    <Content Include="css\skins\_all-skins.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\linea.svg" />
+    <Content Include="img\7.jpg" />
+    <Content Include="img\bg_login_medical.jpg" />
+    <Content Include="img\fondo2.png" />
     <Content Include="img\ico\favicon.ico" />
     <Content Include="img\logo-dark.png" />
     <Content Include="img\logosm.png" />
-    <Content Include="img\user2-160x160.jpg" />
+    <Content Include="img\spritemap.png" />
+    <Content Include="img\up_archivos_btn.png" />
+    <Content Include="img\user_profile.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="js\app.min.js" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\drilldown.js" />
+    <Content Include="js\dropzone.js" />
+    <Content Include="js\exporting.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\jquery\DataTables\css\jquery.dataTables.css" />
+    <Content Include="js\jquery\DataTables\images\favicon.ico" />
+    <Content Include="js\jquery\DataTables\images\sort_asc.png" />
+    <Content Include="js\jquery\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="js\jquery\DataTables\images\sort_both.png" />
+    <Content Include="js\jquery\DataTables\images\sort_desc.png" />
+    <Content Include="js\jquery\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="js\jquery\DataTables\js\jquery.dataTables.js" />
     <Content Include="js\jquery\jquery-2.1.1.min.js" />
+    <Content Include="js\MenuMaster.js" />
+    <Content Include="js\modals.js" />
     <Content Include="js\pages\login.js" />
+    <Content Include="js\pages\Responsables.js" />
+    <Content Include="js\pages\SubirArchivo.js" />
+    <Content Include="js\select2.full.js" />
+    <Content Include="js\sweet-alert.js" />
     <Content Include="Login.aspx" />
     <Content Include="plugins\forms\validation\additional-methods.js" />
     <Content Include="plugins\forms\validation\additional-methods.min.js" />
     <Content Include="plugins\forms\validation\jquery.validate.js" />
     <Content Include="plugins\forms\validation\jquery.validate.min.js" />
+    <Content Include="Responsables.aspx" />
+    <Content Include="SubirArchivo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\AccesoDatos.cs" />
+    <Compile Include="BD\clsLlenarCombos.cs" />
+    <Compile Include="BD\SQLHelper.cs" />
+    <Compile Include="ImportarArchivo.ashx.cs">
+      <DependentUpon>ImportarArchivo.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,8 +207,25 @@
       <DependentUpon>MenuPrincipal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responsables.aspx.cs">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsables.aspx.designer.cs">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirArchivo.aspx.cs">
+      <DependentUpon>SubirArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubirArchivo.aspx.designer.cs">
+      <DependentUpon>SubirArchivo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Documentos\" />
+    <Folder Include="plugins\forms\select2\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -2,9 +2,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+
      <div class="am-content">
         <div class="main-content">
-
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>Dashboard
+                    <small>Datos y estadísticas</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i>Level</a></li>
+                    <li class="active">Here</li>
+                </ol>
+            </section>
             <div class="row">
                 <div class="col-md-12" style="padding-top:50px">
                     <div class="row reportes_estadisticos_box">

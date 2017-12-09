@@ -21,3 +21,39 @@
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
+
+/*=================================================================
+= custom drop zone (form Subir Archivo)
+=================================================================*/
+.dropzone .dz-default.dz-message {
+    background-image: url('../img/up_archivos_btn.png') !IMPORTANT;    
+    height: 158px ;
+    margin-left: 0 !IMPORTANT;
+    background-position: center center !IMPORTANT;
+    margin-top: 0 !IMPORTANT;
+    top: 0 !IMPORTANT;
+    left: 0 !IMPORTANT;
+    width: 100% !IMPORTANT;
+    border: 2px dashed #00b39d;
+    background-color: #f6fffe;
+}
+.dropzone {
+    border: 0 !IMPORTANT;
+    min-height: 157px !IMPORTANT;
+    border-radius: 0 !IMPORTANT;
+    background: transparent !IMPORTANT;
+    padding: 0;
+}
+/*=================================================================
+= backgroud page
+=================================================================*/
+.myinput1 {  
+  width: 100%;
+  font-size: 16px;
+  height:27px;
+  border: 1px solid #86e4db;
+  color:black;
+  padding: 3px 3px 3px 3px;
+  
+}
+

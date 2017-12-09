@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8">
-    <title>Login | Optimización </title>
+    <title>Login | LifeCYCLE </title>
     <!-- Mobile specific metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
     <!-- Force IE9 to render in normal mode -->
@@ -41,12 +41,12 @@
                 </h4>
             </div>
             <div class="panel-body">
-                <form class="form-horizontal mt0" action="Index.aspx" id="login-form" role="form">
+                <form class="form-horizontal mt0" <%--action="Index.aspx"--%> action="javascript:iniciarSesion();" id="login-form" role="form">
                     <div class="form-group">
                         <div class="col-lg-12">
                             <div class="input-group input-icon">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" name="email" id="email" class="form-control" <%--value="admin@dynamic.com"--%> placeholder="Usuario">
+                                <input type="text" name="email" id="email" class="form-control" value="lenycz" placeholder="Usuario">
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="col-lg-12">
                             <div class="input-group input-icon">
                                 <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-                                <input type="password" name="password" id="password" class="form-control" <%--value="somepass"--%> placeholder="Contraseña">
+                                <input type="password" name="password" id="password" class="form-control" value="l8429" placeholder="Contraseña">
                             </div>
                         </div>
                     </div>
@@ -97,5 +97,7 @@
     <script src="plugins/forms/validation/additional-methods.min.js"></script>
     <!-- Init plugins olny for this page -->
     <script src="js/pages/login.js"></script>
+    <script src="js/sweet-alert.js"></script>
+
 </body>
 </html>
