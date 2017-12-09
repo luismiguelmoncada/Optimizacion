@@ -32,6 +32,13 @@
   <link href="css/cards.css" rel="stylesheet" />
   <link href="css/select2.min.css" rel="stylesheet" />
 
+     <script>
+        function pulsar(e) {
+            tecla = (document.all) ? e.keyCode : e.which;
+            return (tecla != 13);
+        }
+    </script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -397,7 +404,7 @@
     <script src="js/sweet-alert.js"></script>
     <script src="js/select2.full.js"></script>
     <script src="js/pages/SubirArchivo.js"></script>
-   
+    <script src="js/bootstrap-notify.js"></script>
 
 
     <script src="js/jquery/DataTables/js/jquery.dataTables.js"></script>
