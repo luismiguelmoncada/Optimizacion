@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MenuPrincipal.Master" AutoEventWireup="true" CodeBehind="Responsables.aspx.cs" Inherits="Optimizacion.Responsables" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="js/pages/Responsables.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <div class="am-content">
@@ -21,12 +23,12 @@
 
                 <div class="col-md-10" style="padding-left: 0">
                    <%-- <h1 class="bp-header__title">Asignación de Responsables</h1>--%>
-                    <p>Seleccione el personal que va a realizar la optimización.</p>
+                    <p>Seleccione el personal que va a realizar la optimización de las ordenes según el CUPS.</p>
                 </div>
 
-                <div class="col-md-2" style="text-align: end; padding-right: 0;">
+                <div class="col-md-2" style="text-align: end;">
                    <%-- <button id="btnListResponsables">Listar</button>--%>
-                     <input type="button" id="btnListResponsables" class="btn btn-warning" value="Listar" />
+                     <input type="button" id="btnListResponsables" class="btn btn-success" value="Listar Todos" />
                 </div>
 
 
@@ -39,7 +41,7 @@
                 </div>--%>
             </header>
             <div>             
-                <div class="card" style="margin: 0;padding-top:10px">
+                <div class="card" style="margin: 0;margin-top:7px">
                     <div class="col-lg-12 col-md-12" data-background-color="bluee" style="padding: 15px; border-radius: 3px">
 
                         <div class="col-md-3">
@@ -63,29 +65,38 @@
                         </div>
 
                         <div class="col-md-1" style="text-align: end; padding-top: 22px">
-                             <input type="button" id="btnAdd" class="btn btn-danger" value="Adicionar" />
+                             <input type="button" id="btnAdd" class="btn btn-warning" value="Adicionar" />
                             <%--<button id="btnAdd">Adicionar</button>--%>
                         </div>
 
                     </div>
                 </div>
 
-                  <div class="col-lg-12 col-md-12">
+                  <div class="col-lg-12 col-md-12" style="padding:0">
                       <div class="card-content table-responsive">
-                          <div class="dataTables_scrollBody" style="position: relative; overflow: auto; max-height: 390px; width: 100%;">
+                       <div class="table-wrapper">    
+                          <div class="dataTables_scrollBody table-scroll" style="overflow: auto; max-height: 390px; width: 100%;">
+                          <%-- <div class="table-scroll">--%>
                               <table id="tablaParametros" <%--style="visibility:hidden"--%> class="table table-hover table-action">
                                   <thead>
                                       <tr>
-                                          <th>Responsable</th>
+                                           <th><span class="text">Responsable</span></th>
+                                           <th><span class="text">Identificación</span></th>
+                                           <th><span class="text">Cups</span></th>
+                                           <th><span class="text">Descripción</span></th>
+                                           <th><span class="text">Acción</span></th>
+
+<%--                                          <th>Responsable</th>
                                           <th>Identificación</th>
                                           <th>Cups</th>
                                           <th>Descripción </th>
-                                          <th>Accion</th>
+                                          <th>Acción</th>--%>
                                       </tr>
                                   </thead>
                                   <tbody id="bodytablaParametros"></tbody>
                               </table>
                           </div>
+                        </div>
                       </div>
                   </div>
 

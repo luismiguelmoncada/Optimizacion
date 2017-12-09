@@ -98,6 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\pages\Proveedores.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -174,6 +175,7 @@
     <Content Include="plugins\forms\validation\additional-methods.min.js" />
     <Content Include="plugins\forms\validation\jquery.validate.js" />
     <Content Include="plugins\forms\validation\jquery.validate.min.js" />
+    <Content Include="Proveedores.aspx" />
     <Content Include="Responsables.aspx" />
     <Content Include="SubirArchivo.aspx" />
     <Content Include="Web.config" />
@@ -207,6 +209,13 @@
       <DependentUpon>MenuPrincipal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Responsables.aspx.cs">
       <DependentUpon>Responsables.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

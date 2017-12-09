@@ -23,11 +23,11 @@
                         <br />
                     </div>
                     <div class="col-lg-3 col-md-3" style="text-align: center; padding-top: 50px">
-                        <input type="button" id="btnProcesarArchivo" class="btn btn-primary" value="Procesar Archivo" onclick="procesarArchivo();" />
+                        <input type="button" id="btnProcesarArchivo" class="btn btn-warning" value="Procesar Archivo" onclick="procesarArchivo();" />
                         <%-- <button id="btnProcesarArchivo" class="btn btn-primary" onclick="procesarArchivo();">Procesar Archivo</button>--%>
                     </div>
                     <div class="col-lg-3 col-md-3" style="text-align: center; padding-top: 50px">
-                        <input type="button" id="btnRepartir" class="btn btn-primary" value="Distribuir Cups" />
+                        <input type="button" id="btnRepartir" class="btn btn-danger" value="Distribuir Cups" />
                         <%--<button id="btnRepartir" class="btn btn-primary">Distribuir Cups</button>--%>
                     </div>
 

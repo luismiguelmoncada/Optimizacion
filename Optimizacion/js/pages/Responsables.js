@@ -26,6 +26,8 @@ $(document).ready(function () {
     //$('#tablaParametros').DataTable({
     //    "scrollY": "200px",
     //    "scrollCollapse": true,
+    //    "ordering": false,
+    //    "info":     false,
     //    "paging": false
     //});
 });
@@ -61,7 +63,7 @@ function consultarAsignaciones(spP) {
                     tbl += '<td>' + datos[i].identificacion + '</td>';
                     tbl += '<td>' + datos[i].cups + '</td>';
                     tbl += '<td>' + datos[i].Descripcion + '</td>';
-                    tbl += '<td>' + '<input type="button" id="btnEliminar_' + datos[i].IdAsignacion + '" onclick="EliminarResponsable(' + datos[i].IdAsignacion + ')" class="btn btn-primary" value="Eliminar" />' + '</td>';
+                    tbl += '<td>' + '<input type="button" id="btnEliminar_' + datos[i].IdAsignacion + '" onclick="EliminarResponsable(' + datos[i].IdAsignacion + ')" class="btn btn-danger" value="Eliminar" />' + '</td>';
                     //tbl += '<td>' + '<button id="btnEliminar_' + datos[i].IdAsignacion + '" onclick="EliminarResponsable(' + datos[i].IdAsignacion + ')" class="btn btn-primary">Eliminar</button>' + '</td>';
                     tbl += '</tr>';
 
@@ -161,7 +163,7 @@ function AsignarResponsables() {
                         tbl += '<td>' + idresponsable + '</td>';
                         tbl += '<td>' + cups + '</td>';
                         tbl += '<td>' + descripcion + '</td>';
-                        tbl += '<td>' + '<input type="button" id="btnEliminar_a' + datos[0].idasignacion + '" onclick="EliminarResponsable(' + datos[0].idasignacion + ')" class="btn btn-primary" value="Eliminar" />' + '</td>';
+                        tbl += '<td>' + '<input type="button" id="btnEliminar_a' + datos[0].idasignacion + '" onclick="EliminarResponsable(' + datos[0].idasignacion + ')" class="btn btn-danger" value="Eliminar" />' + '</td>';
                         tbl += '</tr>';
 
                         $("#tablaParametros").append(tbl);

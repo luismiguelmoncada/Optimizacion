@@ -397,7 +397,9 @@
     <script src="js/sweet-alert.js"></script>
     <script src="js/select2.full.js"></script>
     <script src="js/pages/SubirArchivo.js"></script>
-    <script src="js/pages/Responsables.js"></script>
+   
+
+
     <script src="js/jquery/DataTables/js/jquery.dataTables.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

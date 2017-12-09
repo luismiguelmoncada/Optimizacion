@@ -283,7 +283,7 @@ table.dataTable td {
   clear: both;
   *zoom: 1;
   zoom: 1;
-  padding: 3em;
+  /*padding: 3em;*/
 }
 a.btn.btn-primary.btn-fab.btn-fab-mini {
     line-height: 37px;
